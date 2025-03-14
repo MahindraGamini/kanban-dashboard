@@ -3,6 +3,8 @@ import TaskCard from './TaskCard';
 import { useTasks } from '../context/TaskContext';
 import { useDroppable } from '@dnd-kit/core';
 
+
+//columns containing status 
 const Column = ({ title, status }) => {
   const { tasks } = useTasks();
   const { setNodeRef } = useDroppable({
@@ -14,7 +16,7 @@ const Column = ({ title, status }) => {
   
   const columnTasks = tasks.filter(task => task.status === status);
   
-  // Color mapping for column headers
+//color maooing for the ui
   const colorMap = {
     'To Do': 'bg-purple-100 border-purple-200 text-purple-800',
     'In Progress': 'bg-blue-100 border-blue-200 text-blue-800',
