@@ -63,11 +63,11 @@ project-root
 |   |   |-- SearchBar.jsx         # The search bar component
 |   |   |-- TaskList.js           # Displays the list of tasks
 |   |   |-- TaskForm.js           # Form to add new tasks
-|-- context
-|   |-- TaskContext.js        # Context for managing global task state
-|-- App.js                    # Main app component
-|-- index.js                  # Entry point for the app
-|-- index.css                 # Global styles
+|   |-- context
+|   |   |-- TaskContext.js        # Context for managing global task state
+|   |-- App.js                    # Main app component
+|   |-- index.js                  # Entry point for the app
+|   |-- index.css                 # Global styles
 |-- public
 |-- package.json
 |-- README.md
