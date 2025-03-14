@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-
+//creates context for the tasks
 const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
@@ -21,13 +21,13 @@ export const TaskProvider = ({ children }) => {
     };
     setTasks([...tasks, newTask]);
   };
-
+//updating the tasks status
   const updateTaskStatus = (taskId, newStatus) => {
     setTasks(tasks.map(task => 
       task.id === taskId ? { ...task, status: newStatus } : task
     ));
   };
-
+    //search functionality logic
   const filteredTasks = searchTerm 
     ? tasks.filter(task => 
         task.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -47,7 +47,7 @@ export const TaskProvider = ({ children }) => {
     </TaskContext.Provider>
   );
 };
-
+//exporting the context
 export const useTasks = () => useContext(TaskContext);
 
 export default TaskContext;
