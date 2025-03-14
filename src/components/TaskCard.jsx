@@ -2,6 +2,8 @@ import React from 'react';
 import { useDraggable } from '@dnd-kit/core';
 
 const TaskCard = ({ task }) => {
+
+    //use taskcard ui and will pass the id and data from a map
   const {attributes, listeners, setNodeRef, transform, isDragging} = useDraggable({
     id: task.id,
     data: {
@@ -12,6 +14,7 @@ const TaskCard = ({ task }) => {
   const style = transform ? {
     transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
   } : undefined;
+  
 
   return (
     <div 
