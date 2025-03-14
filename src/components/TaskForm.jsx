@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useTasks } from '../context/TaskContext';
 import { X } from 'lucide-react';
 
+//task form is used to add task 
 const TaskForm = ({ isOpen, onClose }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const { addTask } = useTasks();
+  const [title, setTitle] = useState('');//state the title
+  const [description, setDescription] = useState(''); //state of the task description
+  const { addTask } = useTasks(); //using the context 
   
   useEffect(() => {
     const handleEscape = (e) => {
@@ -32,7 +33,7 @@ const TaskForm = ({ isOpen, onClose }) => {
   }, [isOpen]);
   
   if (!isOpen) return null;
-  
+  //submitting logic for the function
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title.trim()) return;
