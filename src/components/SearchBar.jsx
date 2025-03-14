@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTasks } from '../context/TaskContext';
 import { Search } from 'lucide-react';
-
+//searchbar component 
 const SearchBar = () => {
+  //imported functionality form the context
   const { searchTerm, setSearchTerm } = useTasks();
   
   return (
